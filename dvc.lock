@@ -4,8 +4,8 @@ stages:
     cmd: datazimmer run-step complete-core
     deps:
     - path: src/core/ns_meta.py
-      md5: f41f28de74fd37ceed18312861e8e61b
-      size: 2075
+      md5: 20294055e213fa72fcb689e4b32732d1
+      size: 2060
     - path: src/core/update_data.py
       md5: 1a0c7a96fd1d413ed0897a88ccfb9477
       size: 1379
@@ -15,48 +15,48 @@ stages:
         envs.complete.params.data_root: https://raw.githubusercontent.com/sscu-budapest/datazimmer/main/dogshow/data
     outs:
     - path: data/dogshowbase/core/complete
-      md5: e4231a71b610b48e8f26f6ad1964a887.dir
-      size: 40537
+      md5: 0b8be9d2f62f1a3ffcd964a33b8dae07.dir
+      size: 41896
       nfiles: 7
   highest_comps-core:
     cmd: datazimmer run-step highest_comps-core
     deps:
     - path: data/dogshowbase/core/complete
-      md5: e4231a71b610b48e8f26f6ad1964a887.dir
-      size: 40537
+      md5: 0b8be9d2f62f1a3ffcd964a33b8dae07.dir
+      size: 41896
       nfiles: 7
     - path: src/core/create_envs.py
       md5: e38a5b53626408557e180d8f424fe1ab
       size: 2316
     - path: src/core/ns_meta.py
-      md5: f41f28de74fd37ceed18312861e8e61b
-      size: 2075
+      md5: 20294055e213fa72fcb689e4b32732d1
+      size: 2060
     params:
       zimmer.yaml:
         envs.highest_comps.params.min_prize_pool: 12000
     outs:
     - path: data/dogshowbase/core/highest_comps
-      md5: f6a1d04e2f09bd28863d8f84067b98a2.dir
-      size: 34152
+      md5: e0670f96761dc0fc18d44bc0d3cfe198.dir
+      size: 34912
       nfiles: 7
   top_comps-core:
     cmd: datazimmer run-step top_comps-core
     deps:
     - path: data/dogshowbase/core/complete
-      md5: e4231a71b610b48e8f26f6ad1964a887.dir
-      size: 40537
+      md5: 0b8be9d2f62f1a3ffcd964a33b8dae07.dir
+      size: 41896
       nfiles: 7
     - path: src/core/create_envs.py
       md5: e38a5b53626408557e180d8f424fe1ab
       size: 2316
     - path: src/core/ns_meta.py
-      md5: f41f28de74fd37ceed18312861e8e61b
-      size: 2075
+      md5: 20294055e213fa72fcb689e4b32732d1
+      size: 2060
     params:
       zimmer.yaml:
         envs.top_comps.params.min_prize_pool: 8000
     outs:
     - path: data/dogshowbase/core/top_comps
-      md5: 84e6f7d7e99f7e6aaea76d6c553da4e2.dir
-      size: 36029
+      md5: d92ee86c86710256d0c308f05ba36ba2.dir
+      size: 36886
       nfiles: 7
