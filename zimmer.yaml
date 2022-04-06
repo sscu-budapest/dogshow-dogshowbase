@@ -1,7 +1,10 @@
 name: dogshowbase
 version: v0.0
-default_env: complete  # is the default anyway
-validation_envs: [complete, top_comps, highest_comps]
+default_env: complete
+validation_envs:
+- complete
+- top_comps
+- highest_comps
 registry: git@github.com:sscu-budapest/dogshow-registry
 envs:
   complete:
@@ -14,3 +17,5 @@ envs:
     remote: dog-remote2
     params:
       min_prize_pool: 12000
+cron_bumps:
+  complete-core: 0
