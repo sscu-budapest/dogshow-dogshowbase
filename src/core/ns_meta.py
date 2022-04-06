@@ -60,7 +60,7 @@ class AddressType(dz.CompositeTypeBase):
     building = BuildingInfoType
 
 
-# add in v0.0:     zip = str
+    zip = str
 
 
 class PersonFeatures(dz.TableFeaturesBase):
