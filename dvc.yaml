@@ -1,0 +1,35 @@
+stages:
+  top_comps-core:
+    cmd: datazimmer run-step top_comps-core
+    deps:
+    - data/dogshowbase/core/complete
+    - src/core/create_envs.py
+    - src/core/ns_meta.py
+    params:
+    - zimmer.yaml:
+      - envs.top_comps.params.min_prize_pool
+    outs:
+    - data/dogshowbase/core/top_comps
+  highest_comps-core:
+    cmd: datazimmer run-step highest_comps-core
+    deps:
+    - data/dogshowbase/core/complete
+    - src/core/create_envs.py
+    - src/core/ns_meta.py
+    params:
+    - zimmer.yaml:
+      - envs.highest_comps.params.min_prize_pool
+    outs:
+    - data/dogshowbase/core/highest_comps
+  complete-core:
+    cmd: datazimmer run-step complete-core
+    deps:
+    - src/core/ns_meta.py
+    - src/core/update_data.py
+    params:
+    - zimmer.yaml:
+      - cron_bumps.complete-core
+      - envs.complete.params.data_root
+    outs:
+    - data/dogshowbase/core/complete:
+        persist: true
