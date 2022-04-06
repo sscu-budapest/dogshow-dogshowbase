@@ -1,0 +1,6 @@
+[core]
+    remote = dog-remote1
+['remote "dog-remote1"']
+    url = s3://sscu-budapest-public
+['remote "dog-remote2"']
+    url = s3://sscu-budapest-public-test-v2
