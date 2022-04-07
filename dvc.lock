@@ -11,18 +11,18 @@ stages:
       size: 1379
     params:
       zimmer.yaml:
-        cron_bumps.complete-core: 0
+        cron_bumps.complete-core: 1
         envs.complete.params.data_root: https://raw.githubusercontent.com/sscu-budapest/datazimmer/main/dogshow/data
     outs:
     - path: data/dogshowbase/core/complete
-      md5: 0b8be9d2f62f1a3ffcd964a33b8dae07.dir
+      md5: f616563c4a491f9712e9548b83a2f230.dir
       size: 41896
       nfiles: 7
   highest_comps-core:
     cmd: datazimmer run-step highest_comps-core
     deps:
     - path: data/dogshowbase/core/complete
-      md5: 0b8be9d2f62f1a3ffcd964a33b8dae07.dir
+      md5: f616563c4a491f9712e9548b83a2f230.dir
       size: 41896
       nfiles: 7
     - path: src/core/create_envs.py
@@ -43,7 +43,7 @@ stages:
     cmd: datazimmer run-step top_comps-core
     deps:
     - path: data/dogshowbase/core/complete
-      md5: 0b8be9d2f62f1a3ffcd964a33b8dae07.dir
+      md5: f616563c4a491f9712e9548b83a2f230.dir
       size: 41896
       nfiles: 7
     - path: src/core/create_envs.py

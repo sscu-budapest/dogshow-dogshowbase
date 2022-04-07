@@ -18,4 +18,4 @@ envs:
     params:
       min_prize_pool: 12000
 cron_bumps:
-  complete-core: 0
+  complete-core: 1
